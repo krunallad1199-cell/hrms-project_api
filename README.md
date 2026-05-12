@@ -1,48 +1,102 @@
 # HRMS Pro - Backend API
 
-The backend for HRMS Pro is built using .NET 8.0, providing a robust and scalable foundation for human resource management. It utilizes a Repository Pattern with Dapper for efficient data access and stored procedures for business logic.
+HRMS Pro Backend API is built using .NET 8.0 and ASP.NET Core Web API.  
+It provides a scalable and secure backend solution for managing employees, attendance, payroll, onboarding, and HR operations.
 
-## 🚀 Technologies
-- **Framework:** .NET 8.0 (ASP.NET Core Web API)
-- **Database Access:** Dapper (Micro-ORM)
-- **Database Provider:** SQL Server (Microsoft.Data.SqlClient)
-- **Documentation:** Swagger / OpenAPI
-- **Architecture:** Repository Pattern
+---
 
-## 🛠️ Key Features
-- **Authentication:** Secure login and registration.
-- **Employee Management:** CRUD operations for employee data.
-- **Attendance:** Tracking and managing employee attendance.
-- **Payroll:** Managing salaries and payslips.
-- **Document Management:** Handling employee documents and uploads.
-- **Onboarding:** Managing new hire onboarding processes.
-- **Dashboard:** Aggregated statistics and analytics.
+## 🚀 Technologies Used
+
+- .NET 8.0 (ASP.NET Core Web API)
+- Dapper (Micro ORM)
+- SQL Server
+- Microsoft.Data.SqlClient
+- Swagger / OpenAPI
+- Repository Pattern
+
+---
+
+## ✨ Features
+
+- Secure Authentication & Authorization
+- Employee Management
+- Attendance Management
+- Payroll Management
+- Document Upload & Management
+- Employee Onboarding
+- Dashboard & Analytics
+- RESTful API Architecture
+
+---
+
+## 📦 Project Structure
+
+```text
+Controllers/    → API endpoints
+Repositories/   → Data access layer using Dapper
+Data/           → Database configuration & context
+Models/         → DTOs & entities
+SQL/             → Stored procedures & SQL scripts
+```
+
+---
 
 ## ⚙️ Setup & Installation
 
 ### Prerequisites
-- .NET 8.0 SDK
+
+- .NET 8 SDK
 - SQL Server
 
-### Configuration
-1. Update the connection string in `appsettings.json`:
-   ```json
-   "ConnectionStrings": {
-     "DefaultConnection": "Server=YOUR_SERVER;Database=HRMS_Pro;Trusted_Connection=True;TrustServerCertificate=True;"
-   }
-   ```
-2. Ensure the SQL stored procedures are executed against your database (check the `SQL` folder).
+---
 
-### Running the API
+## 🔧 Configuration
+
+Update the connection string in:
+
+```text
+appsettings.json
+```
+
+Example:
+
+```json
+"ConnectionStrings": {
+  "DefaultConnection": "Server=YOUR_SERVER;Database=HRMS_Pro;Trusted_Connection=True;TrustServerCertificate=True;"
+}
+```
+
+> Do not store real database credentials in public repositories.
+
+---
+
+## ▶️ Run the Application
+
 ```bash
 dotnet restore
 dotnet run
 ```
-The API will be available at `http://localhost:5000` (or the port specified in `launchSettings.json`). You can access Swagger UI at `/swagger`.
 
-## 📁 Project Structure
-- `Controllers/`: API endpoints handling requests.
-- `Repositories/`: Data access logic using Dapper.
-- `Data/`: Database connection and context.
-- `Models/`: Data transfer objects and entities.
-- `SQL/`: SQL scripts and stored procedures.
+API URL:
+
+```text
+http://localhost:5000
+```
+
+Swagger URL:
+
+```text
+http://localhost:5000/swagger
+```
+
+---
+
+## 📄 API Documentation
+
+Swagger/OpenAPI documentation is enabled for testing and API exploration.
+
+---
+
+## 👨‍💻 Author
+
+Krunal Lad
